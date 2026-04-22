@@ -4225,43 +4225,26 @@ product-recommendations:has([data-has-recommendations='false']) {
   font-weight: 700;
 }
 
-[id$='__trust_pet_care'] .group-block {
-  background: rgb(var(--color-background-rgb) / 72%);
-  box-shadow: 0 16px 38px rgb(0 0 0 / 6%);
-}
-
-[id$='__trust_pet_care'] .group-block-content::before {
-  content: '';
-  display: block;
-  width: 34px;
-  height: 3px;
-  border-radius: 999px;
-  background: currentcolor;
-  opacity: 0.32;
-}
-
-[id$='__trust_pet_care'] h3,
-[id$='__product_list_pet_essentials'] h2,
-[id$='__product_list_pet_essentials'] h3 {
+[id$='__product_highlights_pet'] h2,
+[id$='__product_highlights_pet'] h3 {
   margin-block: 0;
 }
 
-[id$='__trust_pet_care'] p,
-[id$='__product_list_pet_essentials'] p {
+[id$='__product_highlights_pet'] p {
   margin-block: 8px 0;
   opacity: 0.78;
 }
 
-[id$='__product_list_pet_essentials'] .card-gallery,
-[id$='__product_list_pet_essentials'] .product-card__image {
+[id$='__product_highlights_pet'] .card-gallery,
+[id$='__product_highlights_pet'] .product-card__image {
   border-radius: 8px;
 }
 
-[id$='__product_list_pet_essentials'] .product-card {
+[id$='__product_highlights_pet'] .product-card {
   height: 100%;
 }
 
-[id$='__product_list_pet_essentials'] .product-card:hover {
+[id$='__product_highlights_pet'] .product-card:hover {
   box-shadow: 0 18px 38px rgb(0 0 0 / 8%);
 }
 
@@ -4287,16 +4270,11 @@ product-recommendations:has([data-has-recommendations='false']) {
     font-size: 1rem;
   }
 
-  [id$='__trust_pet_care'] .group-block {
-    padding-block: 20px;
-    padding-inline: 18px;
-  }
-
-  [id$='__product_list_pet_essentials'] .section-resource-list__header {
+  [id$='__product_highlights_pet'] .section-resource-list__header {
     width: 100%;
   }
 
-  [id$='__product_list_pet_essentials'] .resource-list {
+  [id$='__product_highlights_pet'] .resource-list {
     --resource-list-mobile-gap-max: 16px;
   }
 }
