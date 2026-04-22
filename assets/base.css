@@ -4208,3 +4208,95 @@ product-recommendations:has([data-has-recommendations='false']) {
     translate: 0px var(--atc-destination, 0px);
   }
 }
+
+/* Homepage pet brand refresh */
+[id$='__hero_pet_premium'] .hero__media {
+  object-position: 58% center;
+}
+
+[id$='__hero_pet_premium'] .hero__content-wrapper {
+  text-shadow: 0 2px 18px rgb(0 0 0 / 28%);
+}
+
+[id$='__hero_pet_premium'] .button {
+  min-height: 52px;
+  padding-inline: 28px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+[id$='__trust_pet_care'] .group-block {
+  background: rgb(var(--color-background-rgb) / 72%);
+  box-shadow: 0 16px 38px rgb(0 0 0 / 6%);
+}
+
+[id$='__trust_pet_care'] .group-block-content::before {
+  content: '';
+  display: block;
+  width: 34px;
+  height: 3px;
+  border-radius: 999px;
+  background: currentcolor;
+  opacity: 0.32;
+}
+
+[id$='__trust_pet_care'] h3,
+[id$='__product_list_pet_essentials'] h2,
+[id$='__product_list_pet_essentials'] h3 {
+  margin-block: 0;
+}
+
+[id$='__trust_pet_care'] p,
+[id$='__product_list_pet_essentials'] p {
+  margin-block: 8px 0;
+  opacity: 0.78;
+}
+
+[id$='__product_list_pet_essentials'] .card-gallery,
+[id$='__product_list_pet_essentials'] .product-card__image {
+  border-radius: 8px;
+}
+
+[id$='__product_list_pet_essentials'] .product-card {
+  height: 100%;
+}
+
+[id$='__product_list_pet_essentials'] .product-card:hover {
+  box-shadow: 0 18px 38px rgb(0 0 0 / 8%);
+}
+
+@media screen and (max-width: 749px) {
+  [id$='__hero_pet_premium'] .hero {
+    min-height: max(560px, calc(var(--hero-min-height) - var(--hero-height-offset)));
+  }
+
+  [id$='__hero_pet_premium'] .hero__container {
+    align-items: flex-end;
+  }
+
+  [id$='__hero_pet_premium'] .hero__content-wrapper {
+    padding-inline: 20px;
+  }
+
+  [id$='__hero_pet_premium'] h1 {
+    font-size: 2.75rem;
+    line-height: 0.98;
+  }
+
+  [id$='__hero_pet_premium'] p {
+    font-size: 1rem;
+  }
+
+  [id$='__trust_pet_care'] .group-block {
+    padding-block: 20px;
+    padding-inline: 18px;
+  }
+
+  [id$='__product_list_pet_essentials'] .section-resource-list__header {
+    width: 100%;
+  }
+
+  [id$='__product_list_pet_essentials'] .resource-list {
+    --resource-list-mobile-gap-max: 16px;
+  }
+}
