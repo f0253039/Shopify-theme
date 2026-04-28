@@ -14,7 +14,7 @@
       "name": "NeatPet hero",
       "settings": {
         "accessibility_label": "NeatPet hero",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-neatpet-button",
         "eyebrow": "Pet-safe home care",
         "heading": "A Cleaner Home Makes Happier Pets",
         "subheading": "<p>Smart cleaning solutions that keep your home fresh, tidy, and pet-friendly.</p>",
@@ -182,7 +182,7 @@
         "section_width": "page-width",
         "section_height": "large",
         "section_height_custom": 50,
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-neatpet-button",
         "toggle_overlay": true,
         "overlay_color": "#00000026",
         "overlay_style": "gradient",
