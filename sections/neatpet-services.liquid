@@ -1,0 +1,141 @@
+<section class="np-services color-{{ section.settings.color_scheme }}" aria-label="{{ section.settings.accessibility_label | escape }}">
+  <div class="np-services__grid">
+    {% for block in section.blocks %}
+      <div class="np-services__item" {{ block.shopify_attributes }}>
+        {% if block.settings.image != blank %}
+          {{
+            block.settings.image
+            | image_url: width: 120
+            | image_tag: loading: 'lazy', widths: '60, 90, 120', class: 'np-services__image'
+          }}
+        {% endif %}
+        <div>
+          {% if block.settings.title != blank %}
+            <strong>{{ block.settings.title | escape }}</strong>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <span>{{ block.settings.text | escape }}</span>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% stylesheet %}
+  .np-services {
+    --np-border: #e7e3db;
+    background: #fff;
+  }
+
+  .np-services__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    width: min(100%, 1500px);
+    margin: 0 auto 48px;
+    background: var(--np-border);
+    border: 1px solid var(--np-border);
+  }
+
+  .np-services__item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    padding: 24px;
+    background: #fff;
+  }
+
+  .np-services__image {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .np-services strong,
+  .np-services span {
+    display: block;
+  }
+
+  .np-services strong {
+    color: #2b302a;
+  }
+
+  .np-services span {
+    margin-top: 4px;
+    color: #60665e;
+    font-size: .92rem;
+  }
+
+  @media screen and (max-width: 1080px) {
+    .np-services__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .np-services__grid {
+      grid-template-columns: 1fr;
+      margin-inline: 20px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "NeatPet services",
+  "settings": [
+    {
+      "type": "text",
+      "id": "accessibility_label",
+      "label": "Accessibility label",
+      "default": "Store services"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "service",
+      "name": "Service item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Secure Checkout"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Safe and encrypted payments"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "NeatPet services",
+      "blocks": [
+        { "type": "service", "settings": { "title": "Secure Checkout", "text": "Safe and encrypted payments" } },
+        { "type": "service", "settings": { "title": "Satisfaction Guaranteed", "text": "Love it or get your money back" } },
+        { "type": "service", "settings": { "title": "Trusted by Pet Parents", "text": "Thousands of happy homes" } },
+        { "type": "service", "settings": { "title": "Customer Support", "text": "We're here to help" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

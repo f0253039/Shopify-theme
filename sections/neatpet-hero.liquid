@@ -1,0 +1,330 @@
+<section class="np-hero color-{{ section.settings.color_scheme }}" aria-label="{{ section.settings.accessibility_label | escape }}">
+  <div class="np-hero__copy">
+    {% if section.settings.eyebrow != blank %}
+      <p class="np-hero__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    {% endif %}
+    {% if section.settings.heading != blank %}
+      <h1>{{ section.settings.heading | escape }}</h1>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <div class="np-hero__text">{{ section.settings.subheading }}</div>
+    {% endif %}
+    <div class="np-hero__actions">
+      {% if section.settings.primary_label != blank %}
+        <a class="np-hero__button np-hero__button--primary" href="{{ section.settings.primary_link | default: routes.all_products_collection_url }}">
+          {{ section.settings.primary_label | escape }}
+        </a>
+      {% endif %}
+      {% if section.settings.secondary_label != blank %}
+        <a class="np-hero__button np-hero__button--secondary" href="{{ section.settings.secondary_link | default: '/collections' }}">
+          {{ section.settings.secondary_label | escape }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="np-hero__media" aria-hidden="true">
+    {% if section.settings.image != blank %}
+      {{
+        section.settings.image
+        | image_url: width: 1200
+        | image_tag:
+          loading: 'eager',
+          widths: '480, 720, 960, 1200',
+          sizes: '(min-width: 990px) 52vw, 100vw',
+          class: 'np-hero__image'
+      }}
+    {% else %}
+      <div class="np-hero__fallback">
+        <span class="np-hero__plant"></span>
+        <span class="np-hero__sofa"></span>
+        <span class="np-hero__pet np-hero__pet--cat"></span>
+        <span class="np-hero__pet np-hero__pet--dog"></span>
+        <span class="np-hero__product np-hero__product--roller"></span>
+        <span class="np-hero__product np-hero__product--spray"></span>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% stylesheet %}
+  .np-hero {
+    --np-green: #5f734f;
+    --np-deep: #173022;
+    --np-ink: #202420;
+    --np-border: #e7e3db;
+    display: grid;
+    grid-template-columns: minmax(320px, .95fr) minmax(420px, 1.15fr);
+    min-height: 640px;
+    color: var(--np-ink);
+    background: linear-gradient(90deg, #fbfbf8 0%, #f8f7f1 44%, #efe7dc 100%);
+    border-bottom: 1px solid var(--np-border);
+  }
+
+  .np-hero__copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(48px, 7vw, 104px) clamp(24px, 6vw, 84px);
+  }
+
+  .np-hero__eyebrow {
+    margin: 0 0 16px;
+    color: var(--np-green);
+    font-size: .86rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .np-hero h1 {
+    max-width: 760px;
+    margin: 0;
+    color: var(--np-deep);
+    font-size: clamp(3rem, 5.8vw, 6rem);
+    line-height: 1.06;
+    letter-spacing: 0;
+  }
+
+  .np-hero__text {
+    max-width: 560px;
+    margin-top: 26px;
+    color: #41463f;
+    font-size: clamp(1.08rem, 1.45vw, 1.45rem);
+    font-weight: 600;
+    line-height: 1.55;
+  }
+
+  .np-hero__text p {
+    margin: 0;
+  }
+
+  .np-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 40px;
+  }
+
+  .np-hero__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    padding: 0 32px;
+    border-radius: 8px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .np-hero__button--primary {
+    color: #fff;
+    background: var(--np-green);
+    box-shadow: 0 10px 22px rgb(55 69 44 / 18%);
+  }
+
+  .np-hero__button--secondary {
+    color: var(--np-ink);
+    background: #fff;
+    border: 2px solid #d8d7d1;
+  }
+
+  .np-hero__media {
+    position: relative;
+    min-height: 640px;
+    overflow: hidden;
+  }
+
+  .np-hero__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .np-hero__fallback {
+    position: absolute;
+    inset: 0;
+  }
+
+  .np-hero__sofa {
+    position: absolute;
+    inset: 82px 0 auto 23%;
+    height: 220px;
+    border-radius: 44px 0 0 44px;
+    background: linear-gradient(135deg, #ded8cf, #f5f0e8 64%, #d8d0c5);
+    box-shadow: inset 0 -22px 40px rgb(72 64 55 / 14%);
+  }
+
+  .np-hero__plant {
+    position: absolute;
+    left: 13%;
+    top: 28px;
+    width: 150px;
+    height: 280px;
+    background:
+      radial-gradient(ellipse at 35% 20%, #779259 0 18%, transparent 19%),
+      radial-gradient(ellipse at 65% 28%, #6e884f 0 18%, transparent 19%),
+      radial-gradient(ellipse at 28% 48%, #809a61 0 18%, transparent 19%),
+      radial-gradient(ellipse at 72% 58%, #6d854f 0 20%, transparent 21%),
+      linear-gradient(100deg, transparent 48%, #708756 49% 55%, transparent 56%);
+  }
+
+  .np-hero__pet,
+  .np-hero__product {
+    display: block;
+    position: absolute;
+    bottom: 58px;
+  }
+
+  .np-hero__pet {
+    box-shadow: 0 22px 35px rgb(81 63 41 / 17%);
+  }
+
+  .np-hero__pet--dog {
+    right: 25%;
+    width: 250px;
+    height: 305px;
+    z-index: 3;
+    border-radius: 48% 48% 38% 38%;
+    background:
+      radial-gradient(circle at 39% 38%, #1d1b18 0 6px, transparent 7px),
+      radial-gradient(circle at 61% 38%, #1d1b18 0 6px, transparent 7px),
+      radial-gradient(circle at 50% 53%, #3d2b20 0 15px, transparent 16px),
+      linear-gradient(135deg, #e5bd76, #c98a45);
+  }
+
+  .np-hero__pet--cat {
+    left: 9%;
+    width: 170px;
+    height: 210px;
+    z-index: 2;
+    border-radius: 45% 45% 35% 35%;
+    background:
+      radial-gradient(circle at 38% 44%, #1c1c18 0 5px, transparent 6px),
+      radial-gradient(circle at 62% 44%, #1c1c18 0 5px, transparent 6px),
+      repeating-linear-gradient(110deg, #b18d68 0 14px, #d5c2a6 15px 25px);
+  }
+
+  .np-hero__product {
+    bottom: 48px;
+    z-index: 4;
+  }
+
+  .np-hero__product--roller {
+    right: 13%;
+    width: 160px;
+    height: 76px;
+    border: 3px solid #d0c9bd;
+    border-radius: 38px;
+    background: linear-gradient(#fff, #e7e2d9);
+  }
+
+  .np-hero__product--spray {
+    right: 4%;
+    width: 82px;
+    height: 220px;
+    border: 2px solid #d7d0c5;
+    border-radius: 18px 18px 12px 12px;
+    background: linear-gradient(#f9faf7 0 18%, #d8e0d9 19% 34%, #f2eadf 35%);
+  }
+
+  @media screen and (max-width: 1080px) {
+    .np-hero {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .np-hero {
+      min-height: auto;
+    }
+
+    .np-hero__copy {
+      padding: 42px 20px;
+    }
+
+    .np-hero__media {
+      min-height: 360px;
+    }
+
+    .np-hero__actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .np-hero__button {
+      width: 100%;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "NeatPet hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "accessibility_label",
+      "label": "Accessibility label",
+      "default": "NeatPet hero"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Pet-safe home care"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A Cleaner Home Makes Happier Pets"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Smart cleaning solutions that keep your home fresh, tidy, and pet-friendly.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero image"
+    },
+    {
+      "type": "text",
+      "id": "primary_label",
+      "label": "Primary button label",
+      "default": "Shop All Products"
+    },
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Secondary button label",
+      "default": "Explore Bundles"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Secondary button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "NeatPet hero"
+    }
+  ]
+}
+{% endschema %}

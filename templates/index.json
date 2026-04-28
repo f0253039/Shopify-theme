@@ -1,10 +1,10 @@
 {
   "sections": {
-    "neatpet_homepage_new": {
-      "type": "neatpet-homepage-new",
-      "name": "NeatPet homepage new",
+    "neatpet_hero": {
+      "type": "neatpet-hero",
+      "name": "NeatPet hero",
       "settings": {
-        "accessibility_label": "NeatPet homepage",
+        "accessibility_label": "NeatPet hero",
         "color_scheme": "scheme-1",
         "eyebrow": "Pet-safe home care",
         "heading": "A Cleaner Home Makes Happier Pets",
@@ -12,22 +12,15 @@
         "primary_label": "Shop All Products",
         "primary_link": "",
         "secondary_label": "Explore Bundles",
-        "secondary_link": "/collections",
-        "category_heading": "Shop by Category",
-        "category_link_label": "View All",
-        "category_link": "/collections",
-        "products_heading": "Best Sellers",
-        "products_link_label": "View All",
-        "products_link": "",
-        "story_heading": "Designed for Pets. Loved by Pet Parents.",
-        "story_text": "<p>At NeatPet, we create cleaning solutions that help you enjoy more time with your pets in a clean, fresh home.</p>",
-        "story_button_label": "Learn Our Story",
-        "story_button_link": "/pages/about-us",
-        "show_newsletter": true,
-        "newsletter_heading": "Join the NeatPet Family",
-        "newsletter_text": "Get tips, exclusive deals, and pet care advice.",
-        "newsletter_placeholder": "Enter your email",
-        "newsletter_button": "Subscribe"
+        "secondary_link": "/collections"
+      }
+    },
+    "neatpet_benefits": {
+      "type": "neatpet-benefits",
+      "name": "NeatPet benefits",
+      "settings": {
+        "accessibility_label": "Store benefits",
+        "color_scheme": "scheme-1"
       },
       "blocks": {
         "benefit_pet_safe": {
@@ -61,7 +54,25 @@
             "title": "Eco-Friendly",
             "text": "Better for pets, people, planet"
           }
-        },
+        }
+      },
+      "block_order": [
+        "benefit_pet_safe",
+        "benefit_cleaning",
+        "benefit_odor",
+        "benefit_eco"
+      ]
+    },
+    "neatpet_categories": {
+      "type": "neatpet-categories",
+      "name": "NeatPet categories",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "Shop by Category",
+        "link_label": "View All",
+        "link": "/collections"
+      },
+      "blocks": {
         "category_tools": {
           "type": "category",
           "settings": {
@@ -106,7 +117,26 @@
             "text": "More care, more value",
             "link": "/collections"
           }
-        },
+        }
+      },
+      "block_order": [
+        "category_tools",
+        "category_odor",
+        "category_surface",
+        "category_home",
+        "category_bundles"
+      ]
+    },
+    "neatpet_products": {
+      "type": "neatpet-featured-products",
+      "name": "NeatPet products",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "Best Sellers",
+        "link_label": "View All",
+        "link": ""
+      },
+      "blocks": {
         "product_roller": {
           "type": "product_card",
           "settings": {
@@ -151,7 +181,35 @@
             "price": "$49.99",
             "review_text": "5 stars (1,122)"
           }
-        },
+        }
+      },
+      "block_order": [
+        "product_roller",
+        "product_spray",
+        "product_wipes",
+        "product_stain",
+        "product_bundle"
+      ]
+    },
+    "neatpet_story": {
+      "type": "neatpet-story",
+      "name": "NeatPet story",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "Designed for Pets. Loved by Pet Parents.",
+        "text": "<p>At NeatPet, we create cleaning solutions that help you enjoy more time with your pets in a clean, fresh home.</p>",
+        "button_label": "Learn Our Story",
+        "button_link": "/pages/about-us"
+      }
+    },
+    "neatpet_services": {
+      "type": "neatpet-services",
+      "name": "NeatPet services",
+      "settings": {
+        "accessibility_label": "Store services",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
         "service_checkout": {
           "type": "service",
           "settings": {
@@ -182,28 +240,31 @@
         }
       },
       "block_order": [
-        "benefit_pet_safe",
-        "benefit_cleaning",
-        "benefit_odor",
-        "benefit_eco",
-        "category_tools",
-        "category_odor",
-        "category_surface",
-        "category_home",
-        "category_bundles",
-        "product_roller",
-        "product_spray",
-        "product_wipes",
-        "product_stain",
-        "product_bundle",
         "service_checkout",
         "service_guarantee",
         "service_trusted",
         "service_support"
       ]
+    },
+    "neatpet_newsletter": {
+      "type": "neatpet-newsletter",
+      "name": "NeatPet newsletter",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "Join the NeatPet Family",
+        "text": "Get tips, exclusive deals, and pet care advice.",
+        "placeholder": "Enter your email",
+        "button_label": "Subscribe"
+      }
     }
   },
   "order": [
-    "neatpet_homepage_new"
+    "neatpet_hero",
+    "neatpet_benefits",
+    "neatpet_categories",
+    "neatpet_products",
+    "neatpet_story",
+    "neatpet_services",
+    "neatpet_newsletter"
   ]
 }

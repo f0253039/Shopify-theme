@@ -1,0 +1,174 @@
+<section class="np-story color-{{ section.settings.color_scheme }}">
+  <div class="np-story__inner">
+    <div class="np-story__copy">
+      {% if section.settings.heading != blank %}
+        <h2>{{ section.settings.heading | escape }}</h2>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <div class="np-story__text">{{ section.settings.text }}</div>
+      {% endif %}
+      {% if section.settings.button_label != blank %}
+        <a class="np-story__button" href="{{ section.settings.button_link | default: '/pages/about-us' }}">{{ section.settings.button_label | escape }}</a>
+      {% endif %}
+    </div>
+    <div class="np-story__media" aria-hidden="true">
+      {% if section.settings.image != blank %}
+        {{
+          section.settings.image
+          | image_url: width: 900
+          | image_tag: loading: 'lazy', widths: '450, 675, 900', sizes: '(min-width: 990px) 40vw, 90vw'
+        }}
+      {% else %}
+        <span class="np-story__pet"></span>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .np-story {
+    --np-green: #5f734f;
+    --np-deep: #173022;
+    color: #202420;
+    background: #fff;
+  }
+
+  .np-story__inner {
+    display: grid;
+    grid-template-columns: minmax(320px, .9fr) minmax(320px, 1fr);
+    gap: clamp(28px, 5vw, 70px);
+    align-items: center;
+    width: min(100%, 1500px);
+    margin: 18px auto 48px;
+    padding: clamp(32px, 5vw, 64px);
+    background: #f3f6ee;
+  }
+
+  .np-story h2 {
+    margin: 0 0 18px;
+    color: var(--np-deep);
+    font-size: clamp(2rem, 3.2vw, 3.8rem);
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  .np-story__text {
+    color: #41463f;
+    font-size: 1.08rem;
+    line-height: 1.6;
+  }
+
+  .np-story__text p {
+    margin: 0;
+  }
+
+  .np-story__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    margin-top: 28px;
+    padding: 0 32px;
+    border-radius: 8px;
+    color: #fff;
+    background: var(--np-green);
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 10px 22px rgb(55 69 44 / 18%);
+  }
+
+  .np-story__media {
+    position: relative;
+    min-height: 360px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #efe8dc, #dce8dd);
+  }
+
+  .np-story__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .np-story__pet {
+    position: absolute;
+    left: 50%;
+    bottom: 34px;
+    width: 240px;
+    height: 270px;
+    transform: translateX(-50%);
+    border-radius: 48% 48% 38% 38%;
+    background:
+      radial-gradient(circle at 38% 39%, #1d1b18 0 7px, transparent 8px),
+      radial-gradient(circle at 62% 39%, #1d1b18 0 7px, transparent 8px),
+      radial-gradient(circle at 50% 55%, #4e3020 0 17px, transparent 18px),
+      linear-gradient(135deg, #e0b46e, #bd7d42);
+    box-shadow: 0 22px 35px rgb(81 63 41 / 17%);
+  }
+
+  @media screen and (max-width: 1080px) {
+    .np-story__inner {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .np-story__inner {
+      margin-inline: 20px;
+      padding: 28px 20px;
+    }
+
+    .np-story__button {
+      width: 100%;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "NeatPet story",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Designed for Pets. Loved by Pet Parents."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>At NeatPet, we create cleaning solutions that help you enjoy more time with your pets in a clean, fresh home.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Learn Our Story"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "NeatPet story"
+    }
+  ]
+}
+{% endschema %}

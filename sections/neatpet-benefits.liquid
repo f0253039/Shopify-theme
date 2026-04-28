@@ -1,0 +1,190 @@
+<section class="np-benefits color-{{ section.settings.color_scheme }}" aria-label="{{ section.settings.accessibility_label | escape }}">
+  <div class="np-benefits__grid">
+    {% for block in section.blocks %}
+      <div class="np-benefits__item" {{ block.shopify_attributes }}>
+        {% if block.settings.image != blank %}
+          {{
+            block.settings.image
+            | image_url: width: 120
+            | image_tag: loading: 'lazy', widths: '60, 90, 120', class: 'np-benefits__image'
+          }}
+        {% else %}
+          <span class="np-benefits__icon" aria-hidden="true">{{ block.settings.icon | escape }}</span>
+        {% endif %}
+        <div>
+          {% if block.settings.title != blank %}
+            <strong>{{ block.settings.title | escape }}</strong>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <span>{{ block.settings.text | escape }}</span>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% stylesheet %}
+  .np-benefits {
+    --np-green: #5f734f;
+    --np-border: #e7e3db;
+    background: #fff;
+    border-bottom: 1px solid var(--np-border);
+  }
+
+  .np-benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    width: min(100%, 1500px);
+    margin-inline: auto;
+    padding: 30px clamp(24px, 4vw, 58px);
+  }
+
+  .np-benefits__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+  }
+
+  .np-benefits__icon,
+  .np-benefits__image {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+  }
+
+  .np-benefits__icon {
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: var(--np-green);
+    font-weight: 900;
+  }
+
+  .np-benefits__image {
+    object-fit: cover;
+  }
+
+  .np-benefits strong,
+  .np-benefits span {
+    display: block;
+  }
+
+  .np-benefits strong {
+    color: #2b302a;
+    font-size: 1.06rem;
+  }
+
+  .np-benefits span {
+    margin-top: 4px;
+    color: #60665e;
+    font-size: .92rem;
+  }
+
+  @media screen and (max-width: 1080px) {
+    .np-benefits__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .np-benefits__grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding-inline: 20px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "NeatPet benefits",
+  "settings": [
+    {
+      "type": "text",
+      "id": "accessibility_label",
+      "label": "Accessibility label",
+      "default": "Store benefits"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Fallback icon text",
+          "default": "+"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Pet-Safe Ingredients"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Safe for pets and family"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "NeatPet benefits",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "P",
+            "title": "Pet-Safe Ingredients",
+            "text": "Safe for pets and family"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "S",
+            "title": "Powerful Cleaning",
+            "text": "Tough on mess, gentle at home"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "O",
+            "title": "Odor Elimination",
+            "text": "Neutralizes odor at the source"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "E",
+            "title": "Eco-Friendly",
+            "text": "Better for pets, people, planet"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
