@@ -1,12 +1,209 @@
 {
   "sections": {
-    "neatpet_homepage": {
-      "type": "neatpet-homepage",
-      "name": "NeatPet homepage",
-      "settings": {}
+    "neatpet_homepage_new": {
+      "type": "neatpet-homepage-new",
+      "name": "NeatPet homepage new",
+      "settings": {
+        "accessibility_label": "NeatPet homepage",
+        "color_scheme": "scheme-1",
+        "eyebrow": "Pet-safe home care",
+        "heading": "A Cleaner Home Makes Happier Pets",
+        "subheading": "<p>Smart cleaning solutions that keep your home fresh, tidy, and pet-friendly.</p>",
+        "primary_label": "Shop All Products",
+        "primary_link": "",
+        "secondary_label": "Explore Bundles",
+        "secondary_link": "/collections",
+        "category_heading": "Shop by Category",
+        "category_link_label": "View All",
+        "category_link": "/collections",
+        "products_heading": "Best Sellers",
+        "products_link_label": "View All",
+        "products_link": "",
+        "story_heading": "Designed for Pets. Loved by Pet Parents.",
+        "story_text": "<p>At NeatPet, we create cleaning solutions that help you enjoy more time with your pets in a clean, fresh home.</p>",
+        "story_button_label": "Learn Our Story",
+        "story_button_link": "/pages/about-us",
+        "show_newsletter": true,
+        "newsletter_heading": "Join the NeatPet Family",
+        "newsletter_text": "Get tips, exclusive deals, and pet care advice.",
+        "newsletter_placeholder": "Enter your email",
+        "newsletter_button": "Subscribe"
+      },
+      "blocks": {
+        "benefit_pet_safe": {
+          "type": "benefit",
+          "settings": {
+            "icon": "P",
+            "title": "Pet-Safe Ingredients",
+            "text": "Safe for pets and family"
+          }
+        },
+        "benefit_cleaning": {
+          "type": "benefit",
+          "settings": {
+            "icon": "S",
+            "title": "Powerful Cleaning",
+            "text": "Tough on mess, gentle at home"
+          }
+        },
+        "benefit_odor": {
+          "type": "benefit",
+          "settings": {
+            "icon": "O",
+            "title": "Odor Elimination",
+            "text": "Neutralizes odor at the source"
+          }
+        },
+        "benefit_eco": {
+          "type": "benefit",
+          "settings": {
+            "icon": "E",
+            "title": "Eco-Friendly",
+            "text": "Better for pets, people, planet"
+          }
+        },
+        "category_tools": {
+          "type": "category",
+          "settings": {
+            "visual_style": "roller",
+            "title": "Cleaning Tools",
+            "text": "Keep fur and mess away",
+            "link": "/collections"
+          }
+        },
+        "category_odor": {
+          "type": "category",
+          "settings": {
+            "visual_style": "spray",
+            "title": "Odor Control",
+            "text": "Eliminate bad smells",
+            "link": "/collections"
+          }
+        },
+        "category_surface": {
+          "type": "category",
+          "settings": {
+            "visual_style": "wipes",
+            "title": "Surface Cleaning",
+            "text": "Clean every corner",
+            "link": "/collections"
+          }
+        },
+        "category_home": {
+          "type": "category",
+          "settings": {
+            "visual_style": "home",
+            "title": "Home Care",
+            "text": "Daily care for a tidy home",
+            "link": "/collections"
+          }
+        },
+        "category_bundles": {
+          "type": "category",
+          "settings": {
+            "visual_style": "bundle",
+            "title": "Bundles",
+            "text": "More care, more value",
+            "link": "/collections"
+          }
+        },
+        "product_roller": {
+          "type": "product_card",
+          "settings": {
+            "visual_style": "roller",
+            "title": "Pet Hair Remover Roller",
+            "price": "$16.99",
+            "review_text": "5 stars (1,234)"
+          }
+        },
+        "product_spray": {
+          "type": "product_card",
+          "settings": {
+            "visual_style": "spray",
+            "title": "Pet Odor Eliminator Spray",
+            "price": "$15.99",
+            "review_text": "5 stars (987)"
+          }
+        },
+        "product_wipes": {
+          "type": "product_card",
+          "settings": {
+            "visual_style": "wipes",
+            "title": "Multi-Surface Pet Wipes",
+            "price": "$12.99",
+            "review_text": "5 stars (856)"
+          }
+        },
+        "product_stain": {
+          "type": "product_card",
+          "settings": {
+            "visual_style": "home",
+            "title": "Pet Stain & Odor Cleaner",
+            "price": "$17.99",
+            "review_text": "5 stars (765)"
+          }
+        },
+        "product_bundle": {
+          "type": "product_card",
+          "settings": {
+            "visual_style": "bundle",
+            "title": "Neat Home Bundle",
+            "price": "$49.99",
+            "review_text": "5 stars (1,122)"
+          }
+        },
+        "service_checkout": {
+          "type": "service",
+          "settings": {
+            "title": "Secure Checkout",
+            "text": "Safe and encrypted payments"
+          }
+        },
+        "service_guarantee": {
+          "type": "service",
+          "settings": {
+            "title": "Satisfaction Guaranteed",
+            "text": "Love it or get your money back"
+          }
+        },
+        "service_trusted": {
+          "type": "service",
+          "settings": {
+            "title": "Trusted by Pet Parents",
+            "text": "Thousands of happy homes"
+          }
+        },
+        "service_support": {
+          "type": "service",
+          "settings": {
+            "title": "Customer Support",
+            "text": "We're here to help"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_pet_safe",
+        "benefit_cleaning",
+        "benefit_odor",
+        "benefit_eco",
+        "category_tools",
+        "category_odor",
+        "category_surface",
+        "category_home",
+        "category_bundles",
+        "product_roller",
+        "product_spray",
+        "product_wipes",
+        "product_stain",
+        "product_bundle",
+        "service_checkout",
+        "service_guarantee",
+        "service_trusted",
+        "service_support"
+      ]
     }
   },
   "order": [
-    "neatpet_homepage"
+    "neatpet_homepage_new"
   ]
 }
