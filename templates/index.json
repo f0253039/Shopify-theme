@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "neatpet_hero": {
@@ -9,19 +18,122 @@
         "eyebrow": "Pet-safe home care",
         "heading": "A Cleaner Home Makes Happier Pets",
         "subheading": "<p>Smart cleaning solutions that keep your home fresh, tidy, and pet-friendly.</p>",
+        "image": "shopify://shop_images/ChatGPT_Image_2026_4_28_11_13_38.png",
         "primary_label": "Shop All Products",
         "primary_link": "",
         "secondary_label": "Explore Bundles",
         "secondary_link": "/collections"
       }
     },
+    "hero_XtGThy": {
+      "type": "hero",
+      "blocks": {
+        "text_mK8LVT": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>New arrivals</h2>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "h1",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_FdGXq8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Made with care and unconditionally loved by our customers.</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 32,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_V7R4JN": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Shop now",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_mK8LVT",
+        "text_FdGXq8",
+        "button_V7R4JN"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "media_type_2": "image",
+        "image_2": "shopify://shop_images/ChatGPT_Image_2026_4_28_11_13_38.png",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
     "neatpet_benefits": {
       "type": "neatpet-benefits",
-      "name": "NeatPet benefits",
-      "settings": {
-        "accessibility_label": "Store benefits",
-        "color_scheme": "scheme-1"
-      },
       "blocks": {
         "benefit_pet_safe": {
           "type": "benefit",
@@ -61,17 +173,15 @@
         "benefit_cleaning",
         "benefit_odor",
         "benefit_eco"
-      ]
+      ],
+      "name": "NeatPet benefits",
+      "settings": {
+        "accessibility_label": "Store benefits",
+        "color_scheme": "scheme-1"
+      }
     },
     "neatpet_categories": {
       "type": "neatpet-categories",
-      "name": "NeatPet categories",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "heading": "Shop by Category",
-        "link_label": "View All",
-        "link": "/collections"
-      },
       "blocks": {
         "category_tools": {
           "type": "category",
@@ -125,21 +235,22 @@
         "category_surface",
         "category_home",
         "category_bundles"
-      ]
+      ],
+      "name": "NeatPet categories",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "Shop by Category",
+        "link_label": "View All",
+        "link": "/collections"
+      }
     },
     "neatpet_products": {
       "type": "neatpet-featured-products",
-      "name": "NeatPet products",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "heading": "Best Sellers",
-        "link_label": "View All",
-        "link": ""
-      },
       "blocks": {
         "product_roller": {
           "type": "product_card",
           "settings": {
+            "product": "",
             "visual_style": "roller",
             "title": "Pet Hair Remover Roller",
             "price": "$16.99",
@@ -149,6 +260,7 @@
         "product_spray": {
           "type": "product_card",
           "settings": {
+            "product": "",
             "visual_style": "spray",
             "title": "Pet Odor Eliminator Spray",
             "price": "$15.99",
@@ -158,6 +270,7 @@
         "product_wipes": {
           "type": "product_card",
           "settings": {
+            "product": "",
             "visual_style": "wipes",
             "title": "Multi-Surface Pet Wipes",
             "price": "$12.99",
@@ -167,6 +280,7 @@
         "product_stain": {
           "type": "product_card",
           "settings": {
+            "product": "",
             "visual_style": "home",
             "title": "Pet Stain & Odor Cleaner",
             "price": "$17.99",
@@ -176,6 +290,7 @@
         "product_bundle": {
           "type": "product_card",
           "settings": {
+            "product": "",
             "visual_style": "bundle",
             "title": "Neat Home Bundle",
             "price": "$49.99",
@@ -189,7 +304,14 @@
         "product_wipes",
         "product_stain",
         "product_bundle"
-      ]
+      ],
+      "name": "NeatPet products",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "heading": "Best Sellers",
+        "link_label": "View All",
+        "link": ""
+      }
     },
     "neatpet_story": {
       "type": "neatpet-story",
@@ -204,11 +326,6 @@
     },
     "neatpet_services": {
       "type": "neatpet-services",
-      "name": "NeatPet services",
-      "settings": {
-        "accessibility_label": "Store services",
-        "color_scheme": "scheme-1"
-      },
       "blocks": {
         "service_checkout": {
           "type": "service",
@@ -244,7 +361,12 @@
         "service_guarantee",
         "service_trusted",
         "service_support"
-      ]
+      ],
+      "name": "NeatPet services",
+      "settings": {
+        "accessibility_label": "Store services",
+        "color_scheme": "scheme-1"
+      }
     },
     "neatpet_newsletter": {
       "type": "neatpet-newsletter",
@@ -260,6 +382,7 @@
   },
   "order": [
     "neatpet_hero",
+    "hero_XtGThy",
     "neatpet_benefits",
     "neatpet_categories",
     "neatpet_products",
