@@ -41,7 +41,7 @@
         "text_mK8LVT": {
           "type": "text",
           "settings": {
-            "text": "<h1>A Cleaner Home </h1><h1>Makes Happier Pets</h1>",
+            "text": "<h1>A Cleaner Home<br>Makes Happier Pets</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -51,7 +51,7 @@
             "line_height": "tight",
             "letter_spacing": "normal",
             "case": "none",
-            "wrap": "nowrap",
+            "wrap": "pretty",
             "color": "var(--color-foreground-heading)",
             "background": false,
             "background_color": "#00000026",
@@ -148,7 +148,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Explore Bundles",
-                "link": "shopify://collections/all",
+                "link": "/collections",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
@@ -320,7 +320,9 @@
             "visual_style": "roller",
             "title": "Pet Hair Remover Roller",
             "price": "$16.99",
-            "review_text": "5 stars (1,234)"
+            "review_text": "5 stars (1,234)",
+            "link": "shopify://collections/all",
+            "button_label": "Shop now"
           }
         },
         "product_spray": {
@@ -330,7 +332,9 @@
             "visual_style": "spray",
             "title": "Pet Odor Eliminator Spray",
             "price": "$15.99",
-            "review_text": "5 stars (987)"
+            "review_text": "5 stars (987)",
+            "link": "shopify://collections/all",
+            "button_label": "Shop now"
           }
         },
         "product_wipes": {
@@ -340,7 +344,9 @@
             "visual_style": "wipes",
             "title": "Multi-Surface Pet Wipes",
             "price": "$12.99",
-            "review_text": "5 stars (856)"
+            "review_text": "5 stars (856)",
+            "link": "shopify://collections/all",
+            "button_label": "Shop now"
           }
         },
         "product_stain": {
@@ -350,7 +356,9 @@
             "visual_style": "home",
             "title": "Pet Stain & Odor Cleaner",
             "price": "$17.99",
-            "review_text": "5 stars (765)"
+            "review_text": "5 stars (765)",
+            "link": "shopify://collections/all",
+            "button_label": "Shop now"
           }
         },
         "product_bundle": {
@@ -360,7 +368,9 @@
             "visual_style": "bundle",
             "title": "Neat Home Bundle",
             "price": "$49.99",
-            "review_text": "5 stars (1,122)"
+            "review_text": "5 stars (1,122)",
+            "link": "/collections",
+            "button_label": "Shop bundle"
           }
         }
       },

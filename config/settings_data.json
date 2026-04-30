@@ -700,7 +700,7 @@
   "platform_customizations": {
     "custom_css": [
       ".np-benefits__image {border-radius: 0px;}",
-      ".np-benefits__grid {grid-template-columns: repeat(3, 1fr);}"
+      ".np-benefits__grid {grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));}"
     ]
   }
 }

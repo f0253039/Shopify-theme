@@ -14,6 +14,15 @@
       <label class="visually-hidden" for="NeatPetNewsletter-{{ section.id }}">Email</label>
       <input id="NeatPetNewsletter-{{ section.id }}" type="email" name="contact[email]" placeholder="{{ section.settings.placeholder | escape }}" required>
       <button type="submit">{{ section.settings.button_label | escape }}</button>
+      {% if form.posted_successfully? %}
+        <div class="np-newsletter__message np-newsletter__message--success" tabindex="-1">
+          {{ section.settings.success_message | escape }}
+        </div>
+      {% elsif form.errors %}
+        <div class="np-newsletter__message np-newsletter__message--error" tabindex="-1">
+          {{ form.errors | default_errors }}
+        </div>
+      {% endif %}
     {% endform %}
 
     {% if section.settings.image != blank %}
@@ -65,6 +74,7 @@
 
   .np-newsletter__form {
     display: flex;
+    flex-wrap: wrap;
     min-width: min(100%, 470px);
     position: relative;
     z-index: 1;
@@ -87,6 +97,21 @@
     color: #fff;
     background: var(--np-green);
     font-weight: 800;
+  }
+
+  .np-newsletter__message {
+    flex: 0 0 100%;
+    margin: 10px 0 0;
+    font-size: .9rem;
+    line-height: 1.4;
+  }
+
+  .np-newsletter__message--success {
+    color: #dcebd6;
+  }
+
+  .np-newsletter__message--error {
+    color: #ffd7d0;
   }
 
   .np-newsletter__image {
@@ -162,6 +187,12 @@
       "id": "button_label",
       "label": "Button label",
       "default": "Subscribe"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success message",
+      "default": "Thanks for joining the NeatPet family."
     }
   ],
   "presets": [
