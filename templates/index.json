@@ -219,7 +219,8 @@
         "benefit_cleaning": {
           "type": "benefit",
           "settings": {
-            "icon": "S",
+            "image": "shopify://shop_images/icon2.png",
+            "icon": "",
             "title": "Powerful Cleaning",
             "text": "Tough on mess, gentle at home"
           }
