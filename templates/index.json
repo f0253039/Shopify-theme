@@ -9,22 +9,6 @@
  */
 {
   "sections": {
-    "neatpet_hero": {
-      "type": "neatpet-hero",
-      "name": "NeatPet hero",
-      "settings": {
-        "accessibility_label": "NeatPet hero",
-        "color_scheme": "scheme-neatpet-button",
-        "eyebrow": "Pet-safe home care",
-        "heading": "A Cleaner Home Makes Happier Pets",
-        "subheading": "<p>Smart cleaning solutions that keep your home fresh, tidy, and pet-friendly.</p>",
-        "image": "shopify://shop_images/ChatGPT_Image_2026_4_28_11_13_38.png",
-        "primary_label": "Shop All Products",
-        "primary_link": "",
-        "secondary_label": "Explore Bundles",
-        "secondary_link": "/collections"
-      }
-    },
     "hero_XtGThy": {
       "type": "hero",
       "blocks": {
@@ -226,7 +210,8 @@
         "benefit_pet_safe": {
           "type": "benefit",
           "settings": {
-            "icon": "P",
+            "image": "shopify://shop_images/icon1.png",
+            "icon": "",
             "title": "Pet-Safe Ingredients",
             "text": "Safe for pets and family"
           }
@@ -469,7 +454,6 @@
     }
   },
   "order": [
-    "neatpet_hero",
     "hero_XtGThy",
     "neatpet_benefits",
     "neatpet_categories",
