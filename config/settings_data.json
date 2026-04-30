@@ -696,5 +696,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".np-benefits__image{border-radius: 0px; }"
+    ]
   }
 }
