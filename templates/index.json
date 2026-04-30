@@ -225,17 +225,10 @@
             "text": "Tough on mess, gentle at home"
           }
         },
-        "benefit_odor": {
-          "type": "benefit",
-          "settings": {
-            "icon": "O",
-            "title": "Odor Elimination",
-            "text": "Neutralizes odor at the source"
-          }
-        },
         "benefit_eco": {
           "type": "benefit",
           "settings": {
+            "image": "shopify://shop_images/icon3.png",
             "icon": "E",
             "title": "Eco-Friendly",
             "text": "Better for pets, people, planet"
@@ -245,7 +238,6 @@
       "block_order": [
         "benefit_pet_safe",
         "benefit_cleaning",
-        "benefit_odor",
         "benefit_eco"
       ],
       "name": "NeatPet benefits",
