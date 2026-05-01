@@ -41,7 +41,7 @@
         "text_mK8LVT": {
           "type": "text",
           "settings": {
-            "text": "<h1>A Cleaner Home<br>Makes Happier Pets</h1>",
+            "text": "<h1>A Cleaner Home<br/>Makes Happier Pets</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -82,7 +82,7 @@
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 20,
+            "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -194,15 +194,12 @@
         "section_height": "large",
         "section_height_custom": 50,
         "color_scheme": "scheme-custom-green",
-        "toggle_overlay": false,
-        "overlay_color": "#ffffff79",
+        "toggle_overlay": true,
+        "overlay_color": "#ffffff3a",
         "overlay_style": "solid",
         "gradient_direction": "to bottom",
         "blurred_reflection": true,
         "reflection_opacity": 33,
-        "toggle_overlay": true,
-        "overlay_color": "#00000060",
-        "overlay_style": "solid",
         "padding-block-start": 40,
         "padding-block-end": 40
       }
@@ -392,6 +389,112 @@
         "link": ""
       }
     },
+    "section_3zJDGp": {
+      "type": "section",
+      "blocks": {
+        "text_hnJPGK": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h3>Designed for Pets.</h3><h3>Loved by Pet Parents</h3>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h3",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_N7Qgpi": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>At NeatPet, We create cleaning solutions</p><p>that help you enjoy more time with your pets</p><p>in a clean, fresh home.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_qA4zXK": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Learn Our Story",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_hnJPGK",
+        "text_N7Qgpi",
+        "button_qA4zXK"
+      ],
+      "name": "t:names.rich_text_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "page-width",
+        "section_height": "small",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-neatpet-button",
+        "background_media": "image",
+        "video_position": "cover",
+        "background_image": "shopify://shop_images/ChatGPT_Image_2026_5_1_10_22_11.png",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
     "neatpet_story": {
       "type": "neatpet-story",
       "name": "NeatPet story",
@@ -455,7 +558,8 @@
         "heading": "Join the NeatPet Family",
         "text": "Get tips, exclusive deals, and pet care advice.",
         "placeholder": "Enter your email",
-        "button_label": "Subscribe"
+        "button_label": "Subscribe",
+        "success_message": "Thanks for joining the NeatPet family."
       }
     }
   },
@@ -464,6 +568,7 @@
     "neatpet_benefits",
     "neatpet_categories",
     "neatpet_products",
+    "section_3zJDGp",
     "neatpet_story",
     "neatpet_services",
     "neatpet_newsletter"
