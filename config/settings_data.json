@@ -379,8 +379,8 @@
       },
       "scheme-custom-green": {
         "settings": {
-          "background": "#ffffff",
-          "foreground_heading": "#173022",
+          "background": "#96ab86",
+          "foreground_heading": "#5f734f",
           "foreground": "#5f734f",
           "primary": "#173022",
           "primary_hover": "#090a11",

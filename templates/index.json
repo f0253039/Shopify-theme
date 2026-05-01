@@ -496,6 +496,48 @@
         "padding-block-end": 30
       }
     },
+    "neatpet_benefits_Fz9FdB": {
+      "type": "neatpet-benefits",
+      "blocks": {
+        "benefit_GxqCqh": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/icon1.png",
+            "icon": "",
+            "title": "Pet-Safe Ingredients",
+            "text": "Safe for pets and family"
+          }
+        },
+        "benefit_P7tzAc": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/icon2.png",
+            "icon": "",
+            "title": "Powerful Cleaning",
+            "text": "Tough on mess, gentle at home"
+          }
+        },
+        "benefit_GEhBYL": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/icon3.png",
+            "icon": "E",
+            "title": "Eco-Friendly",
+            "text": "Better for pets, people, planet"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_GxqCqh",
+        "benefit_P7tzAc",
+        "benefit_GEhBYL"
+      ],
+      "name": "NeatPet benefits",
+      "settings": {
+        "accessibility_label": "Store benefits",
+        "color_scheme": "scheme-custom-green"
+      }
+    },
     "neatpet_services": {
       "type": "neatpet-services",
       "blocks": {
@@ -559,6 +601,7 @@
     "neatpet_categories",
     "neatpet_products",
     "section_3zJDGp",
+    "neatpet_benefits_Fz9FdB",
     "neatpet_services",
     "neatpet_newsletter"
   ]
