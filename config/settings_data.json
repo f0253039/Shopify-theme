@@ -380,8 +380,8 @@
       "scheme-custom-green": {
         "settings": {
           "background": "#96ab86",
-          "foreground_heading": "#5f734f",
-          "foreground": "#5f734f",
+          "foreground_heading": "#ffffff",
+          "foreground": "#ffffff",
           "primary": "#173022",
           "primary_hover": "#090a11",
           "border": "#f0f1f4",
