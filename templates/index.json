@@ -193,7 +193,7 @@
         "section_width": "page-width",
         "section_height": "large",
         "section_height_custom": 50,
-        "color_scheme": "scheme-custom-green",
+        "color_scheme": "scheme-neatpet-button",
         "toggle_overlay": true,
         "overlay_color": "#ffffff3a",
         "overlay_style": "solid",
