@@ -745,6 +745,11 @@
     }
   }
 
+  /* Make sure the overlay is mobile-only */
+  .hero__container::before {
+    display: none;
+  }
+
   /* Mobile text shadow for better readability */
   @media screen and (max-width: 749px) {
     .hero__content-wrapper h1,
@@ -762,6 +767,7 @@
 
     .hero__container::before {
       content: '';
+      display: block;
       position: absolute;
       inset: 0;
       background: rgba(255, 255, 255, 0.5);
