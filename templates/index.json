@@ -465,6 +465,7 @@
         "text_N7Qgpi",
         "button_qA4zXK"
       ],
+      "custom_css": [],
       "name": "t:names.rich_text_section",
       "settings": {
         "content_direction": "column",
@@ -491,19 +492,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 48,
-        "padding-block-end": 48
-      }
-    },
-    "neatpet_story": {
-      "type": "neatpet-story",
-      "name": "NeatPet story",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "heading": "Designed for Pets. Loved by Pet Parents.",
-        "text": "<p>At NeatPet, we create cleaning solutions that help you enjoy more time with your pets in a clean, fresh home.</p>",
-        "button_label": "Learn Our Story",
-        "button_link": "/pages/about-us"
+        "padding-block-start": 30,
+        "padding-block-end": 30
       }
     },
     "neatpet_services": {
@@ -569,7 +559,6 @@
     "neatpet_categories",
     "neatpet_products",
     "section_3zJDGp",
-    "neatpet_story",
     "neatpet_services",
     "neatpet_newsletter"
   ]
