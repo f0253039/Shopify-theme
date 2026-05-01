@@ -479,7 +479,7 @@
         "section_width": "page-width",
         "section_height": "small",
         "section_height_custom": 50,
-        "color_scheme": "scheme-neatpet-button",
+        "color_scheme": "scheme-custom-text-color",
         "background_media": "image",
         "video_position": "cover",
         "background_image": "shopify://shop_images/ChatGPT_Image_2026_5_1_10_22_11.png",
