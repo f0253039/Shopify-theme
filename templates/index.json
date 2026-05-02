@@ -316,18 +316,6 @@
             "button_label": "Shop now"
           }
         },
-        "product_spray": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "visual_style": "spray",
-            "title": "Pet Odor Eliminator Spray",
-            "price": "$15.99",
-            "review_text": "5 stars (987)",
-            "link": "shopify://collections/all",
-            "button_label": "Shop now"
-          }
-        },
         "product_wipes": {
           "type": "product_card",
           "settings": {
@@ -367,7 +355,6 @@
       },
       "block_order": [
         "product_roller",
-        "product_spray",
         "product_wipes",
         "product_stain",
         "product_bundle"
