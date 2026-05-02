@@ -88,7 +88,7 @@
         "country_selector_style": false,
         "show_language": false,
         "localization_font": "heading",
-        "localization_font_size": "1rem",
+        "localization_font_size": "1.125rem",
         "localization_position": "right",
         "localization_row": "top",
         "section_width": "page-width",
