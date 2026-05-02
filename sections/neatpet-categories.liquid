@@ -67,9 +67,21 @@
 
   .np-categories__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 28px;
     padding-inline: clamp(24px, 4vw, 58px);
+  }
+
+  @media screen and (max-width: 1080px) {
+    .np-categories__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .np-categories__grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   .np-categories__card {
