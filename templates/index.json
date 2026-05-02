@@ -230,7 +230,7 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/icon3.png",
-            "icon": "E",
+            "icon": "",
             "title": "Eco-Friendly",
             "text": "Better for pets, people, planet"
           }
@@ -256,15 +256,6 @@
             "visual_style": "roller",
             "title": "Cleaning Tools",
             "text": "Keep fur and mess away",
-            "link": "/collections"
-          }
-        },
-        "category_odor": {
-          "type": "category",
-          "settings": {
-            "visual_style": "spray",
-            "title": "Odor Control",
-            "text": "Eliminate bad smells",
             "link": "/collections"
           }
         },
@@ -298,7 +289,6 @@
       },
       "block_order": [
         "category_tools",
-        "category_odor",
         "category_surface",
         "category_home",
         "category_bundles"
