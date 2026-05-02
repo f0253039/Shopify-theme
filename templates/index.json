@@ -196,7 +196,7 @@
         "color_scheme": "scheme-neatpet-button",
         "toggle_overlay": true,
         "overlay_color": "#ffffff3b",
-        "mobile_content_background_opacity": 50,
+        "mobile_content_background_opacity": 60,
         "overlay_style": "solid",
         "gradient_direction": "to bottom",
         "blurred_reflection": true,
